@@ -14,22 +14,22 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f7f3ed; /* Warm Cream / Soft Beige */
-      color: #3e322b;            /* Deep Warm Espresso text */
+      background-color: #f7f3ed;
+      color: #3e322b;          
       line-height: 1.6;
       padding: 20px;
     }
 
-    /* Container */
+    /* Main Page Container */
     .container {
       max-width: 1000px;
       margin: 0 auto;
     }
 
-
+    /* Header Section */
     .header {
-      background: #fffdfa;         /* Soft Cream White */
-      border: 2px solid #e2d7c9;   /* Warm Tan Border */
+      background: #fffdfa;      
+      border: 2px solid #e2d7c9; 
       padding: 18px;
       margin-bottom: 20px;
       border-radius: 8px;
@@ -42,40 +42,38 @@
       color: #4a3b32;
     }
 
-    /* Warm Caramel Highlight */
+    /* Inline Styling via Class */
     .highlight {
       color: #c06c37;
       font-weight: 600;
     }
 
-
     .main-area {
       display: flex;
-      flex-direction: column;
+      flex-direction: row; 
       gap: 20px;
     }
 
-    /* Content Area */
+    /* Content Area (Left Column) */
     .content {
+      flex: 3; 
       background: #fffdfa;
       border: 1px solid #e8decb;
       padding: 24px;
       border-radius: 8px;
     }
 
-
     .profile-card {
       display: flex;
       gap: 20px;
       align-items: center;
       background: #fbf7f0;
-      border: 1px solid #e5dace;
-      padding: 20px;
-      margin-bottom: 20px;
+      border: 1px solid #e5dace; 
+      padding: 20px;               
+      margin-bottom: 20px;        
       border-radius: 8px;
     }
 
-    /* Fixed Clean Avatar Styles */
     .avatar {
       width: 120px;
       height: 120px;
@@ -100,7 +98,6 @@
       color: #635347;
     }
 
-    /* Description Section */
     .description h3 {
       color: #4a3b32;
       margin-bottom: 8px;
@@ -111,40 +108,39 @@
     }
 
 
-    .quick-links-bar {
+    .sidebar {
+      flex: 1; 
       background: #fffdfa;
       border: 1px solid #e8decb;
-      padding: 18px 24px;
+      padding: 24px;
       border-radius: 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
     }
 
-    .quick-links-bar h3 {
+    .sidebar h3 {
       font-size: 1.1rem;
       color: #4a3b32;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #e2d7c9;
+      padding-bottom: 6px;
     }
 
-    .quick-links-bar ul {
+    .sidebar ul {
       list-style-type: none;
       display: flex;
-      gap: 20px;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .quick-links-bar a {
-      color: #a0522d; /* Sienna Brown */
+    .sidebar a {
+      color: #a0522d;
       text-decoration: none;
       font-weight: 500;
     }
 
-    .quick-links-bar a:hover {
+    .sidebar a:hover {
       text-decoration: underline;
       color: #6e3e2d;
     }
-
 
     .footer {
       margin-top: 20px;
@@ -157,33 +153,29 @@
       color: #706054;
     }
 
+    @media (max-width: 768px) {
+      .main-area {
+        flex-direction: column; 
+      }
 
-    @media (max-width: 600px) {
       .profile-card {
         flex-direction: column;
         text-align: center;
-      }
-
-      .quick-links-bar {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .quick-links-bar ul {
-        justify-content: center;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    
     <header class="header">
       <h1>IT Portfolio <span class="highlight">Lab 3</span></h1>
     </header>
 
     <main class="main-area">
+
       <section class="content">
-        <div class="profile card">
+        <div class="profile-card">
           <img src="profile-pic.jpg" alt="Alyzter Santos" class="avatar">
           <div class="profile-info">
             <h2>Santos, Alyzter Jayden</h2>
@@ -199,21 +191,27 @@
           <h3>About this lab</h3>
           <p>
             This section demonstrates the CSS box model: content, padding,
-            border, and margin. Resize the browser to see layout changes.
+            border, and margin. Resize the browser window to observe how the layout switches from two columns to a single column on mobile screens.
           </p>
         </article>
       </section>
-  <section class="quick-links-bar">
+
+      <!-- Column 2: Sidebar Section with Quick Links -->
+      <aside class="sidebar">
         <h3>Quick Links</h3>
+        <ul>
           <li><a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/megawoolf13/ITC-Finals-3/main/module-1.pptx&embedded=true" target="_blank">Module 1</a></li>
           <li><a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/megawoolf13/ITC-Finals-3/main/module-7.docx&embedded=true" target="_blank">Module 7</a></li>
           <li><a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/megawoolf13/ITC-Finals-3/main/module-10.ppt&embedded=true" target="_blank">Module 10</a></li>
         </ul>
-      </section>
+      </aside>
+
     </main>
+
     <footer class="footer">
       <p>&copy; 2025 — CSIT Lab</p>
     </footer>
+
   </div>
 </body>
 </html>
