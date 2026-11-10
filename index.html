@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lab 3 — Box Model & Layouts</title>
   <style>
-    /* ==========================================
-       Basic Reset & Base Styles
-       ========================================== */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -28,9 +26,7 @@
       margin: 0 auto;
     }
 
-    /* ==========================================
-       Header
-       ========================================== */
+
     .header {
       background: #fffdfa;         /* Soft Cream White */
       border: 2px solid #e2d7c9;   /* Warm Tan Border */
@@ -52,9 +48,7 @@
       font-weight: 600;
     }
 
-    /* ==========================================
-       Main Layout (Full Width)
-       ========================================== */
+
     .main-area {
       display: flex;
       flex-direction: column;
@@ -69,9 +63,7 @@
       border-radius: 8px;
     }
 
-    /* ==========================================
-       Profile Card (Box Model Component)
-       ========================================== */
+
     .profile-card {
       display: flex;
       gap: 20px;
@@ -118,9 +110,7 @@
       color: #55463c;
     }
 
-    /* ==========================================
-       Quick Links Bar (Moved to Bottom)
-       ========================================== */
+
     .quick-links-bar {
       background: #fffdfa;
       border: 1px solid #e8decb;
@@ -155,9 +145,7 @@
       color: #6e3e2d;
     }
 
-    /* ==========================================
-       Footer
-       ========================================== */
+
     .footer {
       margin-top: 20px;
       background: #fffdfa;
@@ -169,9 +157,7 @@
       color: #706054;
     }
 
-    /* ==========================================
-       Responsive Design (Media Query)
-       ========================================== */
+
     @media (max-width: 600px) {
       .profile-card {
         flex-direction: column;
@@ -220,13 +206,10 @@
   <section class="quick-links-bar">
         <h3>Quick Links</h3>
         <ul>
-          <!-- Opens Module 1 PowerPoint directly in a browser viewer -->
           <li><a href="https://view.officeapps.live.com/op/view.aspx?src=YOUR_LIVE_GITHUB_URL/module-1.pptx" target="_blank">Module 1 (View Online)</a></li>
           
-          <!-- Opens Module 7 Word document directly in a browser viewer -->
           <li><a href="https://view.officeapps.live.com/op/view.aspx?src=YOUR_LIVE_GITHUB_URL/module-7.docx" target="_blank">Module 7 (View Online)</a></li>
           
-          <!-- Opens Module 10 PowerPoint directly in a browser viewer -->
           <li><a href="https://view.officeapps.live.com/op/view.aspx?src=YOUR_LIVE_GITHUB_URL/module-10.ppt" target="_blank">Module 10 (View Online)</a></li>
         </ul>
       </section>
